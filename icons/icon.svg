@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Background rounded square -->
+  <rect x="4" y="4" width="120" height="120" rx="22" ry="22" fill="#0078D4"/>
+
+  <!-- Profile silhouette (head + shoulders) in white, slightly left-of-center -->
+  <g fill="#FFFFFF">
+    <!-- Head -->
+    <circle cx="50" cy="44" r="18"/>
+    <!-- Shoulders / bust -->
+    <path d="M20 102
+             C20 80, 36 68, 50 68
+             C64 68, 80 80, 80 102
+             L80 110
+             L20 110
+             Z"/>
+  </g>
+
+  <!-- Key overlay in lower-right, gold -->
+  <g fill="#F2C200" stroke="#8A6D00" stroke-width="2" stroke-linejoin="round">
+    <!-- Key bow (ring) -->
+    <circle cx="92" cy="78" r="14"/>
+    <!-- Inner hole of bow -->
+    <circle cx="92" cy="78" r="5" fill="#0078D4" stroke="none"/>
+    <!-- Shaft -->
+    <rect x="100" y="74" width="22" height="8" rx="1.5"/>
+    <!-- Teeth -->
+    <rect x="108" y="82" width="4" height="8"/>
+    <rect x="116" y="82" width="4" height="8"/>
+  </g>
+</svg>

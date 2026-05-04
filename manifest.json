@@ -1,0 +1,35 @@
+{
+  "name": "Auto Profile Sign-In",
+  "version": "1.0.0",
+  "description": "Skip the Microsoft account picker by using your current browser profile account automatically.",
+  "homepage_url": "https://github.com/vermacodes/AutoProfileSignIn",
+  "manifest_version": 3,
+  "author": "vermacodes",
+  "permissions": [
+    "identity",
+    "identity.email",
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "*://login.microsoftonline.com/*"
+  ],
+  "background": {
+    "service_worker": "src/main.js"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  }
+}
