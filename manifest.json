@@ -1,6 +1,6 @@
 {
   "name": "Auto Profile Sign-In",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Skip the Microsoft account picker by using your current browser profile account automatically.",
   "homepage_url": "https://github.com/vermacodes/AutoProfileSignIn",
   "manifest_version": 3,

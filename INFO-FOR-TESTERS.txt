@@ -1,0 +1,28 @@
+What it does
+------------
+Auto Profile Sign-In skips the Microsoft "Pick an account" prompt on login.microsoftonline.com by appending the current browser profile's email as login_hint (and whr for federated tenants) to outbound sign-in URLs. It does not authenticate by itself - Microsoft's normal sign-in still runs; the chooser is just pre-filled and bypassed.
+
+How to test
+-----------
+1. Sign in to the browser profile with a Microsoft / Entra account so the profile has an email. The extension reads it via chrome.identity.getProfileUserInfo; if the profile has no email, it is a no-op (expected).
+2. Install the extension.
+3. In a normal window of that profile, open any Microsoft-protected site, e.g. https://portal.azure.com, https://outlook.office.com, https://myaccount.microsoft.com.
+4. Expected: you go straight to password / passkey / MFA for the profile's account, without the "Pick an account" screen.
+5. Click the toolbar icon to toggle off (badge shows "Off") - the standard picker returns. Click again to re-enable.
+
+Test account
+------------
+None needed. Any account already signed in to the tester's browser profile works. We can't provide one because the behavior is tied to the tester's own profile account.
+
+Permissions
+-----------
+- identity, identity.email: read the profile email locally.
+- storage: persist the on/off toggle.
+- declarativeNetRequest (+WithHostAccess): declaratively append login_hint / whr to Microsoft sign-in URLs (no request/response bodies are read).
+- Host *://login.microsoftonline.com/*: scope the rules.
+
+Privacy
+-------
+No network calls of its own. No page content, cookies, tokens, or response bodies read. Email is only added as a query parameter to URLs the user already navigates to on login.microsoftonline.com. Nothing is sent to any third party.
+
+Source: https://github.com/vermacodes/auto-profile-sign-in
