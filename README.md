@@ -4,7 +4,8 @@ A lightweight Microsoft Edge / Chromium extension that skips the "Pick an accoun
 screen on Microsoft sign-in pages by automatically using the account associated
 with your current browser profile.
 
-Source: https://github.com/vermacodes/AutoProfileSignIn
+- Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/dpabpdbmpmamnpppfelcgnjeddifcamc
+- Source: https://github.com/vermacodes/AutoProfileSignIn
 
 ## Why
 
@@ -35,7 +36,14 @@ appends `login_hint` (and `whr` for federated tenants) to outgoing requests to
 No data leaves the browser. The email is only attached to URLs you were already
 navigating to on Microsoft's own sign-in server.
 
-## Install (developer mode)
+## Install
+
+### From the Microsoft Edge Add-ons store (recommended)
+
+Install directly from the official store:
+[Auto Profile Sign-In on Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/dpabpdbmpmamnpppfelcgnjeddifcamc).
+
+### Developer mode (from source)
 
 1. Clone or download this repository.
 2. Open `edge://extensions` (or `chrome://extensions`).
